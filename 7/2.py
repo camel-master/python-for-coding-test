@@ -1,8 +1,8 @@
 # 이진 탐색 소스코드 구현 (재귀 함수)
 def binary_search(array, target, start, end):
-    if start > end:
-        return None
     mid = (start + end) // 2
+    if start > end or mid > len(array) - 1:
+        return None 
     # 찾은 경우 중간점 인덱스 반환
     if array[mid] == target:
         return mid
